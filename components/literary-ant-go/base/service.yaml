@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata: 
+  labels: 
+    app.kubernetes.io/instance: literary-ant-go
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: literary-ant-go 
+  name: literary-ant-go
+spec:
+  ports:
+  - port: 8081 
+    targetPort: 8081 
+  selector:
+    app.kubernetes.io/instance: literary-ant-go 
